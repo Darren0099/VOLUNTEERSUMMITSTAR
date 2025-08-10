@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jadwal Wawancara Rekrutmen Organisasi 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cream: #F5F5F0;
+            --navy: #0A2463;
+            --orange: #FF7D00;
+            --light-blue: #3E92CC;
+            --gray: #6C757D;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--cream);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            color: var(--navy);
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            color: var(--gray);
+            font-weight: 300;
+            font-size: 1.1rem;
+        }
+        
+        .days-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        
+        .day-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.3s ease;
+        }
+        
+        .day-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .day-header {
+            background: var(--navy);
+            color: white;
+            padding: 1.2rem;
+            text-align: center;
+        }
+        
+        .day-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        
+        .interviewers-container {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .interviewers-title {
+            color: var(--navy);
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--orange);
+            display: inline-block;
+        }
+        
+        .interviewers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        
+        .interviewer-card {
+            background: rgba(10, 36, 99, 0.05);
+            border-left: 4px solid var(--orange);
+            padding: 0.8rem;
+            border-radius: 4px;
+        }
+        
+        .interviewer-name {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.2rem;
+        }
+        
+        .interviewer-role {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .schedule-list {
+            padding: 1.5rem;
+        }
+        
+        .schedule-item {
+            padding: 1rem 0;
+            border-bottom: 1px dashed #eee;
+        }
+        
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+        
+        .candidate-name {
+            font-weight: 600;
+            color: var(--navy);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .time-slot {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.3rem;
+        }
+        
+        .time {
+            background: rgba(255, 125, 0, 0.1);
+            color: var(--orange);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin-right: 0.8rem;
+        }
+        
+        .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            margin-right: 0.5rem;
+        }
+        
+        .interviewer-assigned {
+            display: flex;
+            align-items: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .interviewer-assigned::before {
+            content: '👤';
+            margin-right: 0.5rem;
+            color: var(--navy);
+        }
+        
+        .empty-slot {
+            opacity: 0.6;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .day-card {
+                max-width: 100%;
+            }
+            
+            .interviewers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Jadwal Wawancara</h1>
+            <p class="subtitle">Rekrutmen Organisasi 2025</p>
+        </header>
+        
+        <div class="interviewers-container">
+            <h2 class="interviewers-title">Pewawancara</h2>
+            <div class="interviewers-grid">
+                <div class="interviewer-card">
+                    <div class="interviewer-name">Darren</div>
+                    <div class="interviewer-role">PDD & Perlengkapan</div>
+                </div>
+                <div class="interviewer-card">
+                    <div class="interviewer-name">Maryani</div>
+                    <div class="interviewer-role">Lomba</div>
+                </div>
+                <div class="interviewer-card">
+                    <div class="interviewer-name">Regina Alvinesya</div>
+                    <div class="interviewer-role">Acara</div>
+                </div>
+                <div class="interviewer-card">
+                    <div class="interviewer-name">Aulia N</div>
+                    <div class="interviewer-role">Humas</div>
+                </div>
+                <div class="interviewer-card">
+                    <div class="interviewer-name">Saniyah Nusratina</div>
+                    <div class="interviewer-role">Acara</div>
+                </div>
+                <div class="interviewer-card">
+                    <div class="interviewer-name">Virgina Cinta</div>
+                    <div class="interviewer-role">Konsumsi</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="days-container">
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h2 class="day-title">Hari 1 - 12 Agustus</h2>
+                </div>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="candidate-name">Miranti Dzakirah Septiani</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">10:00 - 10:30</div>
+                        </div>
+                        <div class="interviewer-assigned">Regina Alvinesya</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">Afifah Qatrunnada</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">10:30 - 11:00</div>
+                        </div>
+                        <div class="interviewer-assigned">Saniyah Nusratina</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">Visit Meutia Hairani</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">11:00 - 11:30</div>
+                        </div>
+                        <div class="interviewer-assigned">Aulia N</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">Aulia Marsya</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">11:30 - 12:00</div>
+                        </div>
+                        <div class="interviewer-assigned">Aulia N</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h2 class="day-title">Hari 2 - 13 Agustus</h2>
+                </div>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="candidate-name">Maya Azizah Nurin</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">10:00 - 10:30</div>
+                        </div>
+                        <div class="interviewer-assigned">Regina Alvinesya</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">M. Luthfiansyah Khadafi</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">10:30 - 11:00</div>
+                        </div>
+                        <div class="interviewer-assigned">Saniyah Nusratina</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">Nabila Annisa Putri</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">11:00 - 11:30</div>
+                        </div>
+                        <div class="interviewer-assigned">Regina Alvinesya</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">Wahyu Pratama</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">11:30 - 12:00</div>
+                        </div>
+                        <div class="interviewer-assigned">Saniyah Nusratina</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <h2 class="day-title">Hari 3 - 14 Agustus</h2>
+                </div>
+                <div class="schedule-list">
+                    <div class="schedule-item">
+                        <div class="candidate-name">Muhamad Khairul Kalam</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">10:00 - 10:30</div>
+                        </div>
+                        <div class="interviewer-assigned">Virgina Cinta</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">Alverina Sintia Karyaeni</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">10:30 - 11:00</div>
+                        </div>
+                        <div class="interviewer-assigned">Virgina Cinta</div>
+                    </div>
+                    
+                    <div class="schedule-item">
+                        <div class="candidate-name">Najla Karimah</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">11:00 - 11:30</div>
+                        </div>
+                        <div class="interviewer-assigned">Virgina Cinta</div>
+                    </div>
+                    
+                    <div class="schedule-item empty-slot">
+                        <div class="candidate-name">Slot kosong</div>
+                        <div class="time-slot">
+                            <div class="checkbox"></div>
+                            <div class="time">11:30 - 12:00</div>
+                        </div>
+                        <div class="interviewer-assigned">(jika ada tambahan peserta)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
