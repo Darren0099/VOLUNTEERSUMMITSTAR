@@ -190,14 +190,20 @@
             padding-left: 0.5rem;
         }
 
-        @media (max-width: 768px) {
-            .days-container {
-                flex-direction: column;
-            }
-            details.day-card {
-                max-width: 100%;
-            }
-        }
+      
+@media (max-width: 768px) {
+    .days-container {
+        flex-direction: column;
+    }
+    details.day-card {
+        max-width: 100%;
+    }
+    /* Scroll internal di mobile */
+    .schedule-list {
+        max-height: 1200px; /* bisa disesuaikan */
+        overflow-y: auto;
+    }
+}
     </style>
 </head>
 <body>
