@@ -5,206 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jadwal Wawancara Rekrutmen Organisasi 2025</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --cream: #F5F5F0;
-            --navy: #0A2463;
-            --orange: #FF7D00;
-            --light-blue: #3E92CC;
-            --gray: #6C757D;
-        }
+   <style>
+:root {
+    --cream: #F5F5F0;
+    --navy: #0A2463;
+    --orange: #FF7D00;
+    --light-blue: #3E92CC;
+    --gray: #6C757D;
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: var(--cream);
-            color: #333;
-            line-height: 1.6;
-        }
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--cream);
+    color: #333;
+    line-height: 1.6;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
 
-        header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
 
-        h1 {
-            color: var(--navy);
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
+h1 {
+    color: var(--navy);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
 
-        .subtitle {
-            color: var(--gray);
-            font-weight: 300;
-            font-size: 1.1rem;
-        }
+.subtitle {
+    color: var(--gray);
+    font-weight: 300;
+    font-size: 1.1rem;
+}
 
-        .interviewers-container {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
+.interviewers-container {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
 
-        .interviewers-title {
-            color: var(--navy);
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--orange);
-            display: inline-block;
-        }
+.interviewers-title {
+    color: var(--navy);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--orange);
+    display: inline-block;
+}
 
-        .interviewers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1rem;
-        }
+.interviewers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+}
 
-        .interviewer-card {
-            background: rgba(10, 36, 99, 0.05);
-            border-left: 4px solid var(--orange);
-            padding: 0.8rem;
-            border-radius: 4px;
-        }
+.interviewer-card {
+    background: rgba(10, 36, 99, 0.05);
+    border-left: 4px solid var(--orange);
+    padding: 0.8rem;
+    border-radius: 4px;
+}
 
-        .interviewer-name {
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 0.2rem;
-        }
+.interviewer-name {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+}
 
-        .interviewer-role {
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
+.interviewer-role {
+    color: var(--gray);
+    font-size: 0.9rem;
+}
 
-        /* Days container & day cards */
-        .days-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            justify-content: center;
-        }
+/* Days container & day cards */
+.days-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
 
-        details.day-card {
-            flex: 1 1 300px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-            transition: transform 0.3s ease;
-        }
+/* IMPORTANT: set overflow visible so details can grow when opened */
+details.day-card {
+    flex: 1 1 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    /* allow details to expand naturally when opened */
+    overflow: visible;
+    transition: transform 0.3s ease;
+}
 
-        details.day-card:hover {
-            transform: translateY(-5px);
-        }
+details.day-card:hover {
+    transform: translateY(-5px);
+}
 
-        details summary {
-            background: var(--navy);
-            color: white;
-            padding: 1.2rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-            cursor: pointer;
-            outline: none;
-        }
+details summary {
+    background: var(--navy);
+    color: white;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    /* make sure the summary is block-level to show only header when closed */
+    display: block;
+}
 
-        .schedule-list {
-            padding: 1.5rem;
-        }
+/* schedule content */
+.schedule-list {
+    padding: 1.5rem;
+}
 
-        .schedule-item {
-            padding: 1rem 0;
-            border-bottom: 1px dashed #eee;
-        }
+.schedule-item {
+    padding: 1rem 0;
+    border-bottom: 1px dashed #eee;
+}
 
-        .schedule-item:last-child {
-            border-bottom: none;
-        }
+.schedule-item:last-child {
+    border-bottom: none;
+}
 
-        .candidate-name {
-            font-weight: 600;
-            color: var(--navy);
-            margin-bottom: 0.5rem;
-            font-size: 1.1rem;
-        }
+.candidate-name {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
 
-        .time-slot {
-            display: flex;
-            align-items: center;
-            margin-bottom: 0.3rem;
-        }
+.time-slot {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
 
-        .time {
-            background: rgba(255, 125, 0, 0.1);
-            color: var(--orange);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-right: 0.8rem;
-        }
+.time {
+    background: rgba(255, 125, 0, 0.1);
+    color: var(--orange);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-right: 0.8rem;
+}
 
-        .checkbox {
-            width: 18px;
-            height: 18px;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            margin-right: 0.5rem;
-        }
+.checkbox {
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    margin-right: 0.5rem;
+}
 
-        .interviewer-assigned {
-            display: flex;
-            align-items: center;
-            color: var(--gray);
-            font-size: 0.9rem;
-        }
+.interviewer-assigned {
+    display: flex;
+    align-items: center;
+    color: var(--gray);
+    font-size: 0.9rem;
+}
 
-        .interviewer-assigned::before {
-            content: '👤';
-            margin-right: 0.5rem;
-            color: var(--navy);
-        }
+.interviewer-assigned::before {
+    content: '👤';
+    margin-right: 0.5rem;
+    color: var(--navy);
+}
 
-        .break {
-            opacity: 0.6;
-            font-style: italic;
-        }
+.break {
+    opacity: 0.6;
+    font-style: italic;
+}
 
-        .darren-slot {
-            background-color: rgba(62, 146, 204, 0.1);
-            border-left: 3px solid var(--light-blue);
-            padding-left: 0.5rem;
-        }
+.darren-slot {
+    background-color: rgba(62, 146, 204, 0.1);
+    border-left: 3px solid var(--light-blue);
+    padding-left: 0.5rem;
+}
 
-      
+/* MOBILE: show cards in column. Do NOT limit schedule-list height so expand shows full content */
 @media (max-width: 768px) {
     .days-container {
         flex-direction: column;
     }
     details.day-card {
         max-width: 100%;
+        /* ensure natural expansion */
+        overflow: visible;
     }
-    /* Scroll internal di mobile */
+    /* REMOVE any max-height / overflow-y here so expanded details show all items */
     .schedule-list {
-        max-height: 1200px; /* bisa disesuaikan */
-        overflow-y: auto;
+        max-height: none;
+        overflow: visible;
+        padding: 1rem; /* a bit tighter on mobile if you want */
+    }
+
+    /* make the summary visually compact so collapsed state is short */
+    details summary {
+        padding: 0.9rem 1rem;
+        font-size: 1.05rem;
     }
 }
-    </style>
+</style>
+
 </head>
 <body>
     <div class="container">
